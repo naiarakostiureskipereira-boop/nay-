@@ -2,3 +2,8 @@ body {
     background-color: burlywood;
     color: black;
     font-family: ; font-family: "Afacad", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 700px;
+    }
