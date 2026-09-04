@@ -1,0 +1,1 @@
+const avanca = document.querSelectorAll('.btn-proximo');
