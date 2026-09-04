@@ -15,10 +15,9 @@ button {
     font-family: font-family: "Afacad", sans-serif;
 }
 
-.passo [
+.passo {
     display: none;
-]
-
-.passo.ativo [
+}
+.passo.ativo {
     display:block;
-]
+}
