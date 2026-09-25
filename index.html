@@ -1,29 +1,32 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Vina+Sans&display=swap" rel="stylesheet">
-    <title>Em busca da cidade perdida</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Em Busca da Cidade Perdida</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div class="game-container">
+    <header>
+      <h1>Em Busca da Cidade Perdida de Krato</h1>
+    </header>
+    
     <main>
-        <div class="passo ativo" id="passo-0">
-            <p>O mapa amarelado que você encontrou no sotão de seu avô, em Curitiba, não deixava dúvidas: além do Marumbi e das brumas da Serra do Mar, esconde-se a lendária Cidade Perdida de Krato, um eldorado esquecido desde o século XVIII. Com sua mochila nas costas e o cheiro fresco de canela-preta no ar, você desembarca na estação de trem de Morretes, onde os trilhos terminam e a fechada Mata Atlântica paranaense começa. O sol desponta entre as montanhas, revelando dois caminhos possíveis para iniciar sua jornada.</p>
-    <button class="btn-próximo" data-proximo="1">Seguir o leito do Rio Nhundiaquara de barco, conversando com os caiçaras locais sobre as antigas ruínas.</button>
-    <button class="btn-próximo" data-proximo="2">Entrar direto pela Trilha do Itupava a pé, enfrentando o terreno íngreme e o nevoeiro da serra.</button>
-       </div>
-       <div class="passo" id="passo-1">
-            <p>Você pega uma voadeira com um pescador veterano. No percurso, ele aponta marcas antigas entalhadas nas pedras das margens e lhe entrega um velho amuleto de bronze que achou no rio.</p>
-    <button class="btn-próximo" data-proximo="3">Desembarcar no antigo porto de embarcações jesuitas abandonado.</button>
-    <button class="btn-próximo" data-proximo="4">Continuar subindo o rio até a nascente oculta na caverna.</button>
-       </div>
+      <div id="story-text" class="story-box">
+        <!-- O texto da história será inserido aqui via JavaScript -->
+      </div>
+      
+      <div id="options-container" class="options-box">
+        <!-- Os botões de escolha aparecerão aqui -->
+      </div>
     </main>
-    <script src="script.js"></script>
+    
+    <footer>
+      <button id="restart-btn" class="restart-btn hidden">Jogar Novamente</button>
+    </footer>
+  </div>
 
+  <script src="script.js"></script>
 </body>
 </html>
