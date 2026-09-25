@@ -1,4 +1,4 @@
-onst storyNodes = {
+const storyNodes = {
   start: {
     text: "O mapa amarelado que você encontrou no sótão de seu avô, em Curitiba, não deixava dúvidas: além do Marumbi e das brumas da Serra do Mar, esconde-se a lendária Cidade Perdida de Krato. Você desembarca na estação de trem de Morretes, onde os trilhos terminam e a fechada Mata Atlântica começa.",
     options: [
@@ -68,28 +68,27 @@ const restartBtn = document.getElementById('restart-btn');
 
 function showStoryNode(nodeKey) {
   const node = storyNodes[nodeKey];
-  storyTextElement.innerText = node.text;
+  
+  if (!node) return;
 
-  // Limpa botões antigos
+  storyTextElement.innerText = node.text;
   optionsContainerElement.innerHTML = '';
 
-  // Se houver opções, cria os botões
   if (node.options && node.options.length > 0) {
     restartBtn.classList.add('hidden');
     node.options.forEach(option => {
       const button = document.createElement('button');
       button.innerText = option.text;
       button.classList.add('btn');
-      button.addEventListener('click', () => showStoryNode(option.nextNode));
+      button.onclick = () => showStoryNode(option.nextNode);
       optionsContainerElement.appendChild(button);
     });
   } else {
-    // Se chegou a um final, mostra botão de reiniciar
     restartBtn.classList.remove('hidden');
   }
 }
 
-restartBtn.addEventListener('click', () => showStoryNode('start'));
+restartBtn.onclick = () => showStoryNode('start');
 
-// Inicia o jogo no nó principal
+// Iniciar
 showStoryNode('start');
